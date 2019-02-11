@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './screens/principal.dart';
 import './screens/social.dart';
+import './screens/promocion.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => Principal(),
         '/social': (BuildContext context) => Social(),
+        '/promocion': (BuildContext context) => Promocion(),
       },
     );
   }

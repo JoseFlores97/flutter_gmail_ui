@@ -71,7 +71,7 @@ class SideDrawer extends StatelessWidget {
           ),
           DrawerTile('Principal', 'inbox', '/'),
           DrawerTile('Social', 'people', '/social'),
-          DrawerTile('Promociones', 'local_offer', '/'),
+          DrawerTile('Promociones', 'local_offer', '/promocion'),
           DrawerTile('Notificaciones', 'info', '/'),
           DrawerTile('Foros', 'forum', '/'),
           Divider(),
