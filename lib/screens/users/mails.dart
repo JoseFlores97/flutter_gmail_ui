@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './avatar_image.dart';
+
 class Mail extends StatelessWidget {
   final Map<String, dynamic> _mail;
 
@@ -8,17 +10,13 @@ class Mail extends StatelessWidget {
   Widget isFavorite() {
     return _mail['isFavorite']
         ? Icon(Icons.star, color: Colors.yellow[700])
-        : Icon(
-            Icons.star_border,
-            color: Colors.grey,
-          );
+        : Icon(Icons.star_border, color: Colors.grey);
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:
-          EdgeInsets.only(left: 15.0, right: 15.0, top: 15.0, bottom: 15.0),
+      padding: EdgeInsets.all(15.0),
       decoration: BoxDecoration(color: Colors.white),
       child: Row(
         children: <Widget>[
@@ -26,10 +24,7 @@ class Mail extends StatelessWidget {
             flex: 1,
             child: Column(
               children: <Widget>[
-                CircleAvatar(
-                  backgroundImage: AssetImage(_mail['image']),
-                  radius: 22.0,
-                )
+                AvatarImage(_mail['image'], 22.0),
               ],
             ),
           ),

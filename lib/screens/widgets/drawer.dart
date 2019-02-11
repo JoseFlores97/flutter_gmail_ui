@@ -23,7 +23,7 @@ class SideDrawer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Row(
-                    children: <Widget>[AvatarImage('assets/nouser.jpg')],
+                    children: <Widget>[AvatarImage('assets/nouser.jpg', 35.0)],
                   ),
                   Row(
                     children: <Widget>[
