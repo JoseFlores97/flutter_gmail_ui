@@ -4,7 +4,18 @@ import './screens/principal.dart';
 import './screens/social.dart';
 import './screens/promocion.dart';
 
-void main() => runApp(MyApp());
+import 'package:flutter/services.dart';
+
+void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      systemNavigationBarColor: Colors.white,
+      systemNavigationBarIconBrightness: Brightness.dark,
+      systemNavigationBarDividerColor: Colors.grey,
+    ),
+  );
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
