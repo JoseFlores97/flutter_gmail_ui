@@ -10,73 +10,88 @@ class Principal extends StatelessWidget {
       'from': 'Twitter',
       'subject': 'Nuevo inicio de sesión de Twitter desde el',
       'body': 'Observamos que recientemente hubo un inicio',
-      'image': 'assets/nouser.jpg',
-      'isFavorite': true
+      'image': 'assets/a.png',
+      'isFavorite': true,
+      'id': 1
     },
     {
       'from': 'Jose Flores Salas',
       'subject': 'RESPLADO TRADS FRANCES',
       'body': 'bma1_19-2-6.sql',
-      'image': 'assets/nouser.jpg',
-      'isFavorite': false
+      'image': 'assets/e.png',
+      'isFavorite': false,
+      'id': 2
+    },
+    {
+      'from': 'Martin Flores Salas',
+      'subject': 'RESPLADO TRADS FRANCES',
+      'body': 'bma1_19-2-6.sql',
+      'image': 'assets/m.png',
+      'isFavorite': true,
+      'id': 3
     },
     {
       'from': 'Jose Flores Salas',
       'subject': 'RESPLADO TRADS FRANCES',
       'body': 'bma1_19-2-6.sql',
-      'image': 'assets/photo.jpg',
-      'isFavorite': true
+      'image': 'assets/o.png',
+      'isFavorite': false,
+      'id': 4
     },
     {
       'from': 'Jose Flores Salas',
       'subject': 'RESPLADO TRADS FRANCES',
       'body': 'bma1_19-2-6.sql',
-      'image': 'assets/nouser.jpg',
-      'isFavorite': false
-    },
-    {
-      'from': 'Jose Flores Salas',
-      'subject': 'RESPLADO TRADS FRANCES',
-      'body': 'bma1_19-2-6.sql',
-      'image': 'assets/photo.jpg',
-      'isFavorite': true
+      'image': 'assets/e.png',
+      'isFavorite': true,
+      'id': 5
     },
     {
       'from': 'Twitter',
       'subject': 'Nuevo inicio de sesión de Twitter desde el',
       'body': 'Observamos que recientemente hubo un inicio',
-      'image': 'assets/nouser.jpg',
-      'isFavorite': true
+      'image': 'assets/u.png',
+      'isFavorite': true,
+      'id': 6
     },
     {
       'from': 'Jose Flores Salas',
       'subject': 'RESPLADO TRADS FRANCES',
       'body': 'bma1_19-2-6.sql',
-      'image': 'assets/nouser.jpg',
-      'isFavorite': false
+      'image': 'assets/f.png',
+      'isFavorite': false,
+      'id': 7
     },
     {
       'from': 'Jose Flores Salas',
       'subject': 'RESPLADO TRADS FRANCES',
       'body': 'bma1_19-2-6.sql',
-      'image': 'assets/photo.jpg',
-      'isFavorite': true
+      'image': 'assets/g.png',
+      'isFavorite': true,
+      'id': 8
     },
     {
       'from': 'Jose Flores Salas',
       'subject': 'RESPLADO TRADS FRANCES',
       'body': 'bma1_19-2-6.sql',
-      'image': 'assets/nouser.jpg',
-      'isFavorite': false
+      'image': 'assets/a.png',
+      'isFavorite': false,
+      'id': 9
     },
     {
       'from': 'Jose Flores Salas',
       'subject': 'RESPLADO TRADS FRANCES',
       'body': 'bma1_19-2-6.sql',
-      'image': 'assets/photo.jpg',
-      'isFavorite': true
+      'image': 'assets/f.png',
+      'isFavorite': true,
+      'id': 10
     },
   ];
+
+  void deleteMail(int index) {
+    _mails.removeAt(index);
+    print(_mails.length);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -89,19 +104,12 @@ class Principal extends StatelessWidget {
             onPressed: () {},
           )
         ],
-        elevation: 0,
+        elevation: 1,
       ),
       body: ListView.builder(
         itemCount: _mails.length,
         itemBuilder: (context, index) {
-          return Column(
-            children: <Widget>[
-              Mail(_mails[index]),
-              Divider(
-                height: 0.5,
-              ),
-            ],
-          );
+          return Mail(_mails[index], index, deleteMail);
         },
       ),
       floatingActionButton: FloatingButton(),
