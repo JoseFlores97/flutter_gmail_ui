@@ -35,7 +35,7 @@ class SideDrawer extends StatelessWidget {
                               'Jose Antonio Flores',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
@@ -61,7 +61,7 @@ class SideDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('assets/trianglify.png'),
+                image: AssetImage('assets/trianglify.jpg'),
                 colorFilter: ColorFilter.mode(
                   Colors.black.withOpacity(0.2),
                   BlendMode.hardLight,

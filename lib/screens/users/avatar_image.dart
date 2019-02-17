@@ -10,6 +10,7 @@ class AvatarImage extends StatelessWidget {
     return CircleAvatar(
       backgroundImage: AssetImage(_userImage),
       radius: _border,
+      backgroundColor: Colors.white,
     );
   }
 }
